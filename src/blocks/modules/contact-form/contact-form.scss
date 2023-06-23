@@ -1,0 +1,52 @@
+.contact-form {
+	padding-top: 80px;
+	padding-bottom: 95px;
+	@include media("<desktop") {
+		padding-top: 35px;
+		padding-bottom: 50px;
+	}
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 80px;
+		@include media("<tablet") {
+			margin-bottom: 40px;
+		}
+		.title {
+			max-width: 900px;
+		}
+	}
+	&__title-img {
+		width: 234px;
+		height: 234px;
+		flex-shrink: 0;
+		@include media("<desktop") {
+			width: 150px;
+			height: 150px;
+		}
+		@include media("<tablet") {
+			width: 70px;
+			height: 70px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 60px 30px;
+		@include media("<tablet") {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+		.checkbox-wrapper,
+		.button {
+			@include media(">=tablet") {
+				grid-column: 1 / 3;
+			}
+		}
+	}
+}
